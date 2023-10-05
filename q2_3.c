@@ -1,21 +1,41 @@
-#include <stdio.h>
-#include <complex.h>
-#include <math.h>
-complex roots(float a, float b, float c)
-{
-    float d = pow(b, 2) - 4 * a * c;
-    complex root = (-b + pow(d, 0.5)) / (2 * a);
-    return root;
-}
-int main()
-{
-    float a, b, c;
-    printf("ax^2 + bx + c\nenter a, b & c\n");
-    scanf("%f %f %f", &a, &b, &c);
-    complex root1 = roots(a, b, c);
-    complex root2 = (-b/a)-root1;
-    printf("1st root is %f + %fi\n", creal(root1), cimag(root1));
-      printf("2nd root is %f + %fi\n", creal(root2), cimag(root2));
+#include<stdio.h>
 
-    return 0;
+#include<math.h>
+
+int main(){
+
+	int a,b,c,A,B,b2;
+
+	printf("FILL THE FOLLOWING QUADRATIC EQUATION AS YOU WANT __X*X+__X+__\n");
+
+	scanf("%d %d %d",&a,&b,&c);
+
+	float x;
+
+	b2=pow(b,2);
+
+	x=sqrt(b2-4*a*c);
+
+	A= (-b+x)/(2*a);
+
+	B=(-b-x)/(2*a);
+
+	if(b2<4*a*c){
+
+		int y= 4*a*c-b2;
+
+		
+
+		printf("roots are -%d+root(%di)/%d ",b,y,2*a);
+
+		printf("and -%d-root(%di)/%d",b,y,2*a);
+
+	}
+
+	else {
+
+	    printf("roots are %d and %d",A,B);
+
+	}
+
 }
