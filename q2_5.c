@@ -1,38 +1,75 @@
- #include <stdio.h>
+ #include<stdio.h>
 
-int main() {
-    int a, b, c, d;
-    printf("Enter four numbers: ");
-    scanf("%d %d %d %d", &a, &b, &c, &d);
-    
-    int max_num, min_num;
-    
-   
-    max_num = min_num = a;
-    
+int main(){
 
-    if (b > max_num) {
-        max_num = b;
-    } else if (b < min_num) {
-        min_num = b;
-    }
-    
-   
-    if (c > max_num) {
-        max_num = c;
-    } else if (c < min_num) {
-        min_num = c;
-    }
-    
-  
-    if (d > max_num) {
-        max_num = d;
-    } else if (d < min_num) {
-        min_num = d;
-    }
-    
-    printf("Maximum number: %d\n", max_num);
-    printf("Minimum number: %d\n", min_num);
-    
-    return 0;
+	int a,b,c,d;
+
+	printf("ENTER FIRST NUMBER : ");
+
+	scanf("%d",&a);
+
+	printf("ENTER SECOND NUMBER : ");    // FOUR DISTINCT NUMBER
+
+	scanf("%d",&b);
+
+	printf("ENTER THIRD NUMBER : ");
+
+	scanf("%d",&c);
+
+	printf("ENTER FOURTH NUMBER : ");
+
+	scanf("%d",&d);
+
+	
+
+	if(a>b){
+
+		if(a>c){
+
+			if(a>d){
+
+				printf("1st NUMBER IS LARGEST");
+
+			}
+
+		}
+
+	}
+
+	else if(b>c){
+
+		if(b>d){
+
+			if(b>a){
+
+				printf("2nd NUMBER IS LARGEST");
+
+			}
+
+		}
+
+	}
+
+	else if(c>d){
+
+		if(c>a){
+
+			if(c>b){
+
+				printf("3rd NUMBER IS LARGEST");
+
+			}
+
+		}
+
+	}
+
+	else{
+
+		printf("4th NUMBER IS LARGEST");
+
+	}
+
+	return 0;
+
 }
