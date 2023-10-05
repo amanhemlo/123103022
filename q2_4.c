@@ -1,34 +1,81 @@
 #include <stdio.h>
 
-int main() {
-    int a, b, c;
-    printf("Enter 3 numbers: ");
-    scanf("%d %d %d", &a, &b, &c);
-    
-    int max_num, min_num;
-    
-   
-    max_num = min_num = a;
-    
+int main(){
 
-    if (b > max_num) {
-        max_num = b;
-    } else if (b < min_num) {
-        min_num = b;
+    int a, b, c;                                   // THREE DISTINCT NUMBERS
+
+    printf("Enter 1st number : ");
+
+    scanf("%d", &a);
+
+    printf("Enter 2nd number : ");
+
+    scanf("%d", &b);
+
+    printf("Enter 3rd number : ");
+
+    scanf("%d", &c);
+
+
+
+    if (a > b){
+
+        if (a > c){
+
+            printf("1ST NUMBER IS LARGEST\n");    //  B IS OUT SO CHECK BETWEEN A AND C WHICH IS LARGEST
+
+        }
+
+        else{
+
+            printf("3RD NUMBER IS LARGEST\n");    // A CAN NOT BE SMALLEST SO CHECK BETWEEN B AND C WHICH IS SMALLEST
+
+        }
+
+        if (b > c){
+
+            printf("3RD NUMBER IS SMALLEST");
+
+        }
+
+        else{
+
+            printf("2ND NUMBER IS SMALLEST");
+
+        }
+
     }
-    
-   
-    if (c > max_num) {
-        max_num = c;
-    } else if (c < min_num) {
-        min_num = c;
+
+
+
+    else{
+
+        if (b > c){
+
+            printf("2ND NUMBER IS LARGEST\n");     // A IS OUT SO CHECK BETWEEN B AND C WHICH IS LARGEST
+
+        }
+
+        else{
+
+            printf("3RD NUMBER IS LARGEST\n");    // B CANNOT BE SMALLEST SO CHECK BETWEEN A AND C WHICH IS SMALLEST
+
+        }
+
+        if (a > c){
+
+            printf("3RD NUMBER IS SMALLEST");
+
+        }
+
+        else{
+
+            printf("1ST NUMBER IS SMALLEST");
+
+        }
+
     }
-    
-  
-    
-    
-    printf("Maximum number: %d\n", max_num);
-    printf("Minimum number: %d\n", min_num);
-    
+
     return 0;
+
 }
